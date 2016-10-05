@@ -21,8 +21,8 @@ urlpatterns = [
     
     url(r'^admin/', include(admin.site.urls)),
     #~ url(r'^home/', home),
-    url(r'^meetups/', meetups_home), #list of past meetups attended by a user
-    #~ url(r'^meetups/(?P<meetup_id>.*)/$', meetup), #meetup details
-    #~ url(r'^join_group/', join_group), #happens while registering a user
+    url(r'^meetups/', 			 meetups_home), 	#list of past meetups attended by a user
+    url(r'^meetups/(?P<meetup_id>.*)/$', meetup_details), 	#meetup details
+    url(r'^join_group/(?P<group_id>.*)', join_group), 		#happens while registering a user
     
 ]
