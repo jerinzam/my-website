@@ -18,6 +18,11 @@ from django.contrib import admin
 from meetup.views import *
 
 urlpatterns = [
+    
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^home/', home),
+    #~ url(r'^home/', home),
+    url(r'^meetups/', meetups_home), #list of past meetups attended by a user
+    #~ url(r'^meetups/(?P<meetup_id>.*)/$', meetup), #meetup details
+    #~ url(r'^join_group/', join_group), #happens while registering a user
+    
 ]
